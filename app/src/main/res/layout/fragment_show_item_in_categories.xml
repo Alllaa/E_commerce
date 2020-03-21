@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ShowItemInCategories"
+    android:background="#fff">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/my_toolbar"
+        android:elevation="4dp"
+        android:background="#FFFFFF"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:layout_gravity="center"
+            android:id="@+id/tool_title"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrows"
+            android:id="@+id/back_arrow"/>
+    </com.google.android.material.appbar.MaterialToolbar>
+   <RelativeLayout
+       android:id="@+id/linear_ca"
+       android:layout_below="@id/my_toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="150dp"
+       android:background="#ffff">
+       <ImageView
+           android:id="@+id/img_category"
+           android:layout_width="match_parent"
+           android:layout_height="150dp" />
+
+       <ProgressBar
+           android:id="@+id/progress_bar_categ"
+           android:layout_width="wrap_content"
+           android:layout_height="60dp"
+           android:layout_alignStart="@+id/img_category"
+           android:layout_alignLeft="@+id/img_category"
+           android:layout_alignTop="@+id/img_category"
+           android:layout_alignEnd="@+id/img_category"
+           android:layout_alignRight="@+id/img_category"
+           android:layout_marginStart="184dp"
+           android:layout_marginLeft="184dp"
+           android:layout_marginTop="42dp"
+           android:layout_marginEnd="179dp"
+           android:layout_marginRight="179dp"
+           android:indeterminate="true"
+           android:visibility="gone" />
+   </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/no_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_found_search"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:padding="12dp"
+        android:layout_below="@id/linear_ca"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/item_categories_recycler"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</RelativeLayout>

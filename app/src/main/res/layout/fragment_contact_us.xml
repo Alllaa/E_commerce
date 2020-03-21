@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ContactUsFragment"
+    android:background="#fff"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:startIconDrawable="@drawable/ic_person_black_24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter your name"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        app:startIconDrawable="@drawable/email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter your email"
+            android:inputType="textEmailAddress"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/message_contact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="enter your message"
+                android:inputType="text"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="50dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:text="Send"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        app:icon="@drawable/send"
+        android:textAlignment="center"
+        app:iconGravity="textEnd"
+        />
+
+</RelativeLayout>
+</FrameLayout>

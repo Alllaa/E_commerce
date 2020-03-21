@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ChangeLanguageFragment"
+    android:background="#fff"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text="English"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:id="@+id/english_check"
+            android:gravity="center|right"
+            android:background="#fff"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/textColor_black"
+            android:layout_margin="5dp"
+            />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/layout"
+    android:orientation="vertical"
+    >
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="العربية"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:gravity="center|right"
+        android:background="#fff"
+        android:id="@+id/arabic_check"/>
+</LinearLayout>
+    <com.google.android.material.button.MaterialButton
+    android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50dp"
+        android:text="@string/save_changes_languages"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textColor="@color/textColor_black"
+        android:textSize="20sp"
+        android:id="@+id/save"
+        android:textAllCaps="false"
+        >
+
+    </com.google.android.material.button.MaterialButton>
+</RelativeLayout>
+</FrameLayout>

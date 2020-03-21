@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F9F9F9">
+
+    <RelativeLayout
+        android:layout_width="180dp"
+        android:layout_height="190dp"
+        android:id="@+id/line"
+        android:background="#FFFFFF">
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="180dp"
+            android:layout_height="190dp"
+            android:id="@+id/img"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_adapter"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/img"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="139dp"
+            android:indeterminate="true"
+            app:layout_anchor="@+id/img"
+            app:layout_anchorGravity="center" />
+
+        <ImageView
+            android:id="@+id/img_btn_adapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/img"
+            android:layout_alignRight="@+id/img"
+            android:layout_alignBottom="@+id/img"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="150dp"
+            android:background="#00000000"
+            android:src="@drawable/ic_favorite_border_black_24dp" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginTop="3dp"
+        android:maxLength="20"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:text="@string/item_title"/>
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_alignStart="@+id/name"
+        android:layout_marginTop="-2dp"
+        android:textSize="15sp"
+        android:layout_alignLeft="@+id/name"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="@string/item_price"
+        />
+</RelativeLayout>

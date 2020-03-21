@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeActivity"
+    android:background="#D5D0D0">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/my_toolbar"
+        android:elevation="4dp"
+        android:background="#FFFFFF"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:theme="@style/MenuItemTextchange"
+        app:menu="@menu/app_bar"
+        >
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:dividerPadding="8dp"
+            android:orientation="horizontal"
+            android:showDividers="end">
+
+            <ImageButton
+                android:id="@+id/img_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_view_headline_black_24dp"/>
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/arrows"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        app:defaultNavHost="true"
+        android:layout_below="@id/my_toolbar"
+        app:navGraph="@navigation/navigation"
+        android:layout_above="@+id/bottom_nav"
+        >
+
+    </fragment>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/snack_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+<!--
+    android:layout_above="@+id/bottom_nav"
+-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:background="#FFFFFF"
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="0dp"
+        app:menu="@menu/menu"
+         >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

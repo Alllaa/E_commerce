@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.DoneOrderFragment"
+    android:background="#fff">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        >
+        <RelativeLayout
+            android:id="@+id/secondRelative"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            >
+
+            <View
+                android:id="@+id/firstCircle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_black"
+                android:layout_centerVertical="true"
+                />
+
+            <View
+                android:id="@+id/firstLine"
+                android:layout_toRightOf="@+id/firstCircle"
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:background="@color/textColor_black"
+                android:layout_centerVertical="true"
+                />
+            <View
+                android:layout_toRightOf="@+id/firstLine"
+                android:id="@+id/secondCircle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_black"
+                android:layout_centerVertical="true"
+                />
+            <View
+                android:id="@+id/secondLine"
+                android:layout_toRightOf="@+id/secondCircle"
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:background="@color/textColor_black"
+                android:layout_centerVertical="true"
+                />
+            <View
+                android:id="@+id/thirdCircle"
+                android:layout_toRightOf="@+id/secondLine"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_black"
+                android:layout_centerVertical="true"
+
+                />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_below="@+id/secondRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/shippingPoint"
+                android:layout_below="@+id/firstCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipping"
+                android:textColor="@color/textColor_black"
+                android:layout_weight="1"
+                android:gravity="start" />
+
+                        <TextView
+                            android:id="@+id/shipping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Payment"
+                            android:textColor="@color/textColor_black"
+                            android:layout_weight="1"
+                            android:paddingLeft="17dp"
+                            android:gravity="center"
+                            />
+                        <TextView
+                            android:id="@+id/delivered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Confirmation"
+                            android:textColor="@color/textColor_black"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/done_layout"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_layout"
+        android:padding="50dp"
+        android:orientation="vertical"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/success"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/done_order"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#C5C5C5"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shipLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/done_layout"
+        android:padding="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHIPMENT NO. "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="555"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor_black"
+            />
+
+       </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/shipLayout"
+        android:id="@+id/done_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        ></androidx.recyclerview.widget.RecyclerView>
+
+    
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/track_order_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/track_your_order_text_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_margin="50dp"
+        android:layout_alignParentBottom="true"
+        app:icon="@drawable/van"
+        app:iconPadding="15dp"
+        app:iconGravity="textStart"
+        android:layout_below="@+id/done_recycler"
+
+        />
+</RelativeLayout>
+</ScrollView>
+</FrameLayout>

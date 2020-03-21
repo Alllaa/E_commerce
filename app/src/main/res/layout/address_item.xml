@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+
+        >
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/address_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mylocation"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toLeftOf="@+id/edit"
+    android:layout_toRightOf="@+id/address_icon"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    >
+            <TextView
+                android:id="@+id/adress_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/address_number"
+                android:textStyle="bold"
+                android:textColor="@color/textColor_black"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textSize="18sp"
+                android:textColor="#000"/>
+</LinearLayout>
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_edit_black_24dp"/>
+            <RadioButton
+                android:visibility="gone"
+                android:id="@+id/radio_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

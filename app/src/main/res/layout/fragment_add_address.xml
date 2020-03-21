@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.AddAddressFragment"
+    android:background="#fff"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cityy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:inputType="text"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/streett"
+            android:layout_below="@id/cityy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Street"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/buildingg"
+            android:layout_below="@id/streett"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/building"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Building"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+<LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@id/buildingg">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/floorr"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/floor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="floor"
+                android:inputType="number"
+                android:maxLength="3"
+                android:layout_below="@+id/city"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/apartmentt"
+            android:layout_below="@id/buildingg"
+            android:layout_toRightOf="@+id/floorr"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/apartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apartment"
+                android:inputType="text"
+                android:maxLength="4"
+                android:layout_below="@+id/city"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phonen"
+            android:layout_below="@id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone no."
+                android:maxLength="11"
+
+                android:inputType="phone"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/landmarkk"
+            android:layout_below="@id/phonen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/landmark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Landmark"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/notess"
+            android:layout_below="@id/landmarkk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Notes..."
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_below="@+id/notess"
+            android:id="@+id/create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="79dp"
+            android:layout_marginBottom="50dp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:text="@string/add_my_new_address_button"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+</ScrollView>
+</FrameLayout>

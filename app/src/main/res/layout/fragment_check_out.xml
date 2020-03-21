@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CheckOutFragment"
+    android:background="#DFDFDF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        >
+    <RelativeLayout
+        android:id="@+id/secondRelative"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <View
+            android:id="@+id/firstCircle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/circle_black"
+            android:layout_centerVertical="true"
+            />
+
+        <View
+            android:id="@+id/firstLine"
+            android:layout_toRightOf="@+id/firstCircle"
+            android:layout_width="130dp"
+            android:layout_height="4dp"
+            android:background="@color/BackViewColorOffwhite"
+            android:layout_centerVertical="true"
+            />
+        <View
+            android:layout_toRightOf="@+id/firstLine"
+            android:id="@+id/secondCircle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/circle_offwhite"
+            android:layout_centerVertical="true"
+            />
+        <View
+            android:id="@+id/secondLine"
+            android:layout_toRightOf="@+id/secondCircle"
+            android:layout_width="130dp"
+            android:layout_height="4dp"
+            android:background="@color/BackViewColorOffwhite"
+            android:layout_centerVertical="true"
+            />
+        <View
+            android:id="@+id/thirdCircle"
+            android:layout_toRightOf="@+id/secondLine"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/circle_offwhite"
+            android:layout_centerVertical="true"
+
+            />
+
+    </RelativeLayout>
+        <LinearLayout
+            android:layout_below="@+id/secondRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/shippingPoint"
+                android:layout_below="@+id/firstCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipping"
+                android:textColor="@color/textColor_black"
+                android:layout_weight="1"
+                android:gravity="start" />
+<!--
+            <TextView
+                android:id="@+id/shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipped"
+                android:textColor="@color/textColor_black"
+                android:layout_weight="1"
+                android:paddingLeft="17dp"
+                />
+            <TextView
+                android:id="@+id/delivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivered"
+                android:textColor="@color/textColor_black"
+                android:layout_weight="1"
+                android:gravity="end"
+                />-->
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:layout_marginTop="20dp"
+
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/relative5"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/address_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mylocation"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/edit"
+                android:layout_toRightOf="@+id/address_icon"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                >
+                <TextView
+                    android:id="@+id/adress_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/address_number"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColor_black"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:textSize="18sp"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/relative5"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#adadad"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:visibility="gone"
+                android:id="@+id/change_address"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_address_button_text"
+                android:textAllCaps="false"
+
+                android:textSize="20sp"
+                android:textColor="@color/textColor_black"
+                />
+        </LinearLayout>
+</RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shipment"
+            android:textSize="15sp"
+            android:padding="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shipment_recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shipment"
+            android:textSize="15sp"
+            android:padding="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp"
+            android:background="#fff"
+            >
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/items_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_quantity_in_checkout"
+                    android:textColor="@color/textColor_black"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/items_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USD 0"
+                    android:textColor="@color/textColor_black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/shipping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/shipping"
+                    android:textColor="@color/textColor_black" />
+
+                <TextView
+                    android:id="@+id/shipping_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="USD 0"
+                    android:textColor="@color/textColor_black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/textColor_black"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="22dp"
+            android:background="#fff"
+            >
+            <TextView
+                android:id="@+id/total_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_price"
+                android:textColor="@color/textColor_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD 0"
+                android:textColor="@color/textColor_black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/continue_payment"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/continue_payment_button_text"
+            android:textAllCaps="false"
+            android:background="@color/textColor_black"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

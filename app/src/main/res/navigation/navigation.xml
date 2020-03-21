@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+            android:id="@+id/homeFragment"
+        android:name="com.example.e_commerce.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_dealsFragment"
+            app:destination="@id/dealsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_myAccountFragment"
+            app:destination="@id/myAccountFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_wishListFragment"
+            app:destination="@id/wishListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_headLine"
+            app:destination="@id/headLine"
+            app:exitAnim="@anim/slide_down"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_headLine2"
+            app:destination="@id/headLine"
+            app:exitAnim="@anim/slide_down"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_showItemInCategories"
+            app:destination="@id/showItemInCategories" />
+        <action
+            android:id="@+id/action_homeFragment_to_arrival_Seller"
+            app:destination="@id/arrival_Seller" />
+        <action
+            android:id="@+id/action_homeFragment_to_showProduct"
+            app:destination="@id/showProduct" />
+        <action
+            android:id="@+id/action_homeFragment_to_showItemInCategories2"
+            app:destination="@id/showItemInCategories" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.e_commerce.view.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_headLine"
+            app:destination="@id/headLine"
+            app:exitAnim="@anim/slide_down"
+            />
+        <action
+            android:id="@+id/action_cartFragment_to_checkOutFragment"
+            app:destination="@id/checkOutFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_showItemInCategories"
+            app:destination="@id/showItemInCategories" />
+    </fragment>
+    <fragment
+        android:id="@+id/dealsFragment"
+        android:name="com.example.e_commerce.view.DealsFragment"
+        android:label="fragment_deals"
+        tools:layout="@layout/fragment_deals" >
+        <action
+            android:id="@+id/action_dealsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_dealsFragment_to_headLine"
+            app:destination="@id/headLine"
+            app:exitAnim="@anim/slide_down"
+            />
+        <action
+            android:id="@+id/action_dealsFragment_to_showItemInCategories"
+            app:destination="@id/showItemInCategories" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.example.e_commerce.view.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" >
+        <action
+            android:id="@+id/action_wishListFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_wishListFragment_to_headLine"
+            app:destination="@id/headLine"
+            app:exitAnim="@anim/slide_down"
+            />
+        <action
+            android:id="@+id/action_wishListFragment_to_showProduct"
+            app:destination="@id/showProduct" />
+        <action
+            android:id="@+id/action_wishListFragment_to_cartFragment2"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_wishListFragment_to_showItemInCategories"
+            app:destination="@id/showItemInCategories" />
+    </fragment>
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.example.e_commerce.view.MyAccountFragment"
+        android:label="fragment_my_account"
+        tools:layout="@layout/fragment_my_account" >
+        <action
+            android:id="@+id/action_myAccountFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_headLine"
+            app:destination="@id/headLine"
+            app:exitAnim="@anim/slide_down"
+            />
+        <action
+            android:id="@+id/action_myAccountFragment_to_cangePasswordFromMyAccountFragment"
+            app:destination="@id/cangePasswordFromMyAccountFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_updateProfileFragment"
+            app:destination="@id/updateProfileFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_wishListFragment"
+            app:destination="@id/wishListFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_cartFragment2"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_myAddressesFragment"
+            app:destination="@id/myAddressesFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_self"
+            app:destination="@id/myAccountFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_myOrderFragment"
+            app:destination="@id/myOrderFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_changeLanguageFragment"
+            app:destination="@id/changeLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/headLine"
+        android:name="com.example.e_commerce.view.HeadLine"
+        android:label="fragment_head_line"
+        tools:layout="@layout/fragment_head_line" >
+        <action
+            android:id="@+id/action_headLine_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:exitAnim="@anim/slide_up"
+            />
+        <action
+
+            android:id="@+id/action_headLine_to_myAccountFragment"
+            app:destination="@id/myAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cangePasswordFromMyAccountFragment"
+        android:name="com.example.e_commerce.view.CangePasswordFromMyAccountFragment"
+        android:label="fragment_cange_password_from_my_account"
+        tools:layout="@layout/fragment_cange_password_from_my_account" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.example.e_commerce.view.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.example.e_commerce.view.UpdateProfileFragment"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile" >
+        <action
+            android:id="@+id/action_updateProfileFragment_to_myAccountFragment"
+            app:destination="@id/myAccountFragment"
+            app:popUpTo="@+id/updateProfileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/myAddressesFragment"
+        android:name="com.example.e_commerce.view.MyAddressesFragment"
+        android:label="fragment_my_addresses"
+        tools:layout="@layout/fragment_my_addresses" >
+        <action
+            android:id="@+id/action_myAddressesFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.example.e_commerce.view.AddAddressFragment"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" />
+    <fragment
+        android:id="@+id/myOrderFragment"
+        android:name="com.example.e_commerce.view.MyOrderFragment"
+        android:label="fragment_my_order"
+        tools:layout="@layout/fragment_my_order" >
+        <action
+            android:id="@+id/action_headLine_to_showItemInCategories"
+            app:destination="@id/showItemInCategories" />
+        <action
+            android:id="@+id/action_myOrderFragment_self"
+            app:destination="@id/myOrderFragment" />
+        <action
+            android:id="@+id/action_myOrderFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showItemInCategories"
+        android:name="com.example.e_commerce.view.ShowItemInCategories"
+        android:label="fragment_show_item_in_categories"
+        tools:layout="@layout/fragment_show_item_in_categories" >
+        <action
+            android:id="@+id/action_showItemInCategories_to_showProduct"
+            app:destination="@id/showProduct" />
+    </fragment>
+    <fragment
+        android:id="@+id/arrival_Seller"
+        android:name="com.example.e_commerce.view.Arrival_Seller"
+        android:label="fragment_arrival__seller"
+        tools:layout="@layout/fragment_arrival__seller" >
+        <action
+            android:id="@+id/action_arrival_Seller_to_showProduct"
+            app:destination="@id/showProduct" />
+    </fragment>
+    <fragment
+        android:id="@+id/showProduct"
+        android:name="com.example.e_commerce.view.ShowProduct"
+        android:label="fragment_show_product"
+        tools:layout="@layout/fragment_show_product" >
+        <action
+            android:id="@+id/action_showProduct_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_showProduct_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.example.e_commerce.view.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" >
+        <action
+            android:id="@+id/action_checkOutFragment_to_continueCheckOut"
+            app:destination="@id/continueCheckOut" />
+        <action
+            android:id="@+id/action_checkOutFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/continueCheckOut"
+        android:name="com.example.e_commerce.view.ContinueCheckOut"
+        android:label="fragment_continue_check_out"
+        tools:layout="@layout/fragment_continue_check_out" >
+        <action
+            android:id="@+id/action_continueCheckOut_to_cashOnDeliveryFragment"
+            app:destination="@id/cashOnDeliveryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cashOnDeliveryFragment"
+        android:name="com.example.e_commerce.view.CashOnDeliveryFragment"
+        android:label="fragment_cash_on_delivery"
+        tools:layout="@layout/fragment_cash_on_delivery" >
+        <action
+            android:id="@+id/action_cashOnDeliveryFragment_to_doneOrderFragment"
+            app:destination="@id/doneOrderFragment"
+            app:popUpTo="@+id/checkOutFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/doneOrderFragment"
+        android:name="com.example.e_commerce.view.DoneOrderFragment"
+        android:label="fragment_done_order"
+        tools:layout="@layout/fragment_done_order" >
+        <action
+            android:id="@+id/action_doneOrderFragment_to_myOrderFragment"
+            app:destination="@id/myOrderFragment"
+            app:popUpTo="@+id/doneOrderFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_doneOrderFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:popUpTo="@+id/doneOrderFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeLanguageFragment"
+        android:name="com.example.e_commerce.view.ChangeLanguageFragment"
+        android:label="fragment_change_language"
+        tools:layout="@layout/fragment_change_language" >
+        <action
+            android:id="@+id/action_changeLanguageFragment_to_myAccountFragment"
+            app:destination="@id/myAccountFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ContinueCheckOut"
+    android:background="#D5D0D0">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            >
+
+            <View
+                android:id="@+id/firstCircle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_black" />
+
+            <View
+                android:id="@+id/firstLine"
+                android:layout_toRightOf="@+id/firstCircle"
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:background="#000000"
+                android:layout_centerVertical="true"
+                />
+            <View
+                android:layout_toRightOf="@+id/firstLine"
+                android:id="@+id/secondCircle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_black"
+                android:layout_centerVertical="true"
+                />
+            <View
+                android:id="@+id/secondLine"
+                android:layout_toRightOf="@+id/secondCircle"
+                android:layout_width="130dp"
+                android:layout_height="4dp"
+                android:background="#DFDFDFDF"
+                android:layout_centerVertical="true"
+                />
+            <View
+                android:id="@+id/thirdCircle"
+                android:layout_toRightOf="@+id/secondLine"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_grey"
+                android:layout_centerVertical="true"
+
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/shipping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginBottom="15dp"
+            android:text="Shipping"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@+id/shipping"
+            android:layout_centerHorizontal="true"
+            android:text="Payment"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/relative"
+        android:layout_marginTop="25dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/credit_img"
+                android:layout_toRightOf="@+id/credit_img"
+                android:text="@string/credit_card"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        <ImageView
+
+            android:id="@+id/credit_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/credit_card"
+            android:background="#00000000"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#00000000"
+                android:src="@drawable/arrow_rigth" />
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/card1"
+        android:layout_marginTop="25dp"
+        android:background="#ffffff"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_toEndOf="@+id/cash_img"
+                android:layout_toRightOf="@+id/cash_img"
+                android:text="@string/cash_on_delivery"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <ImageView
+
+                android:id="@+id/cash_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/money"
+                android:background="#00000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#00000000"
+                android:src="@drawable/arrow_rigth" />
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

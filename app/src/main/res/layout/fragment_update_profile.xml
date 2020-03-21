@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.UpdateProfileFragment"
+    android:background="#fff"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image_update"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_person_black_24dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_action_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:fabSize="mini"
+                    app:layout_anchor="@+id/profile_image_update"
+                    app:layout_anchorGravity="end|bottom"
+                    app:srcCompat="@drawable/ic_photo_camera_black_24dp" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/update_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="enter your new name"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/update_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="enter your new email"
+                    android:inputType="textEmailAddress"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="50dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>

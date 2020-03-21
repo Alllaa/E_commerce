@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">E-commerce</string>
+    <string name="about">من نحن؟</string>
+    <string name="add_my_new_address_button">اضافة العنوان </string>
+    <string name="add_to_cart">اضافة الي العريه</string>
+    <string name="address">%s</string>
+    <string name="address_number">عنوان %s</string>
+    <string name="buy_now_button_text">اشتري الان</string>
+    <string name="cart">العربه</string>
+    <string name="cash_on_delivery">الدفع عند الاستلام</string>
+    <string name="change_address_button_text">تغيير العنوان</string>
+    <string name="change_password">تغيير كلمة السر</string>
+    <string name="check_out_button_text">احجز</string>
+    <string name="color_selection">اختر لون</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="continue_payment_button_text">التوجه للدفع</string>
+    <string name="create_account_button_text">انشاء حساب</string>
+    <string name="credit_card">بطاقة الرصيد</string>
+    <string name="description">الوصف</string>
+    <string name="done_order">تم</string>
+    <string name="done_passowrd_change">تم</string>
+    <string name="first_instructive_string">ادخل البيانات المطلوبه في الاسفل</string>
+    <string name="forgot_password">نسيت كلمة السر؟</string>
+    <string name="have_or_not_acc">لديك حساب؟</string>
+    <string name="hello_blank_fragment">مرحبا</string>
+    <string name="item_quantity_in_cart">الكميه :</string>
+    <string name="item_quantity_in_checkout">0 قطعه</string>
+    <string name="item_title">%s</string>
+    <string name="language">اللغه</string>
+    <string name="my_addresses">العنوان</string>
+    <string name="my_orders">الطلبات</string>
+    <string name="my_wishlist">المفضلات</string>
+    <string name="not_registered_yet">ليس لديك حساب؟</string>
+    <string name="order_date">تاريخ الطلب</string>
+    <string name="place_order_button_text">حجز الطلب</string>
+    <string name="push_notification">اظهار الاشعارات</string>
+    <string name="second_instructive_string">ادخل البيانات المطلوبه بالاسفل لتسجيل الدخول</string>
+    <string name="see_more">عرض المزيد ></string>
+    <string name="share_app">مشاركة التطبيق</string>
+    <string name="shipment_no">رقم الشحن</string>
+    <string name="shipping">الشحن</string>
+    <string name="sign_in_button_text">تسجيل الدخول</string>
+    <string name="sign_in_option">تسجيل دخول</string>
+    <string name="sign_up_option">انشاء حساب</string>
+    <string name="size_selection_text">اختر مقاس</string>
+    <string name="third_instructive_string">ادخل كلمةالسر الجديدة</string>
+    <string name="total_price">كامل التكلفة</string>
+    <string name="track_your_order_text_button">تتبع طلبك</string>
+    <string name="update_password_button_text">تعديل كلمة السر</string>
+    <string name="edit_profile">تعديل</string>
+    <string name="sign_out">تسجيل خروج</string>
+    <string name="my_address_title">العنوان</string>
+    <string name="no_items_found">قائمة المفضلات لديك فارغة</string>
+    <string name="my_account_title">الصفحة الشخصية</string>
+    <string name="change_password_title">تغيير كلمة المرور</string>
+    <string name="contact_us_title">تواصل معنا</string>
+    <string name="edit_title">تعديل</string>
+    <string name="my_orders_title">الطلبات</string>
+    <string name="change_language_title">تغيير اللغة</string>
+    <string name="save_changes_languages">حفظ التغيرات</string>
+    <string name="home_title">الرئيسية</string>
+    <string name="deal_title">الصفقات</string>
+    <string name="wish_list_title">المفضلات</string>
+    <string name="message_success_change_lang">تم تغيير اللغه بنجاح</string>
+    <string name="no_address">لا يوجد اي عناوين</string>
+    <string name="no_orders_text">لا يوجد طلبات</string>
+    <string name="no_addresses_found">لا يوجد عناوين</string>
+    <string name="cart_title_text">العربه</string>
+    <string name="check_out_title">الدفع</string>
+    <string name="category">الفئة:</string>
+    <string name="no_offer">لا يوجد تخفيض</string>
+    <string name="new_arrivals">المنتجات الجديده</string>
+    <string name="best_seller">الاكثر مبيعا</string>
+    <string name="top_categories">الفئات العليا</string>
+    <string name="no_result_found_search">لا توجد نتائج نتائج بحث</string>
+    <string name="rate_this_product">قيم هذا المنتج؟</string>
+    <string name="what_lang">ar</string>
+    <string name="your_cart_is_empty">العربة لديك فارغة</string>
+    <string name="review">تقييم</string>
+    <string name="my_address">عناويني</string>
+    <string name="check_out">الدفع</string>
+
+
+
+
+</resources>
